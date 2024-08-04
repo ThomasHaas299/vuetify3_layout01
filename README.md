@@ -18,3 +18,7 @@ npm run dev
 
 - index http://localhost:3000/
 - SimplePage1 http://localhost:3000/SimplePage1
+
+## Notes
+
+- xs, sm, md, lg, and xl
