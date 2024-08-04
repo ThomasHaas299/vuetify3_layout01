@@ -25,13 +25,17 @@
 
     <v-footer app>
       <span>My Footer</span>
+
+      <v-btn @click="toggleTheme" variant="plain" size="x-small"
+        >toggle theme</v-btn
+      >
     </v-footer>
   </v-app>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import { useDisplay } from "vuetify";
+import { useDisplay, useTheme } from "vuetify";
 const { mdAndUp, smAndDown } = useDisplay();
 const isSmAndDown = ref(smAndDown);
 
@@ -41,4 +45,10 @@ const title = "The Title";
 // md habe ich so festgelegt, siehe die Klasse des Menu-Buttons und den mobile-breakpoint des Navigation Drawers
 // mdAndUp.value ist ein Boolean, der true ist, wenn die Bildschirmbreite >= 960px ist
 const menu_sidebar = ref(mdAndUp);
+
+const theme = useTheme();
+
+const toggleTheme = () => {
+  theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
+};
 </script>
