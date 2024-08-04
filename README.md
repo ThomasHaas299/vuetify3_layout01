@@ -1,4 +1,6 @@
-# Vuetify
+# Vuetify3-Layout01
+
+Einfach nur ein paar Ideen für ein Layout mit Vuetify 3...
 
 ## Installation
 
