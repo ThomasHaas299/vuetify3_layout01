@@ -70,12 +70,16 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { useDisplay } from "vuetify";
-const { md } = useDisplay();
+const { mdAndUp } = useDisplay();
 
 // menu_sidebar is true if we display in md
 // md habe ich so festgelegt, siehe die Klasse des Menu-Buttons und den mobile-breakpoint des Navigation Drawers
-// md.value ist ein Boolean, der true ist, wenn die Bildschirmbreite >= 960px ist
-const menu_sidebar = ref(md.value);
+// mdAndUp.value ist ein Boolean, der true ist, wenn die Bildschirmbreite >= 960px ist
+let menu_sidebar = ref(null);
+
+onMounted(() => {
+  menu_sidebar.value = mdAndUp.value;
+});
 </script>
