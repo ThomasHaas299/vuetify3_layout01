@@ -20,6 +20,8 @@ npm run dev
 
 - index http://localhost:3000/
 - SimplePage1 http://localhost:3000/SimplePage1
+- NavLayout1 http://localhost:3000/NavLayout1
+- AppBar1 http://localhost:3000/AppBar1
 
 ## Notes
 
